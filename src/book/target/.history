@@ -1,0 +1,14 @@
+compile
+run
+run OptionType
+compile
+run
+last compile:run
+compile
+mainClass in (Comile, run) := Some("book.OptionType")
+run-main book.OptionType
+compiple
+compile
+compiple
+compile
+exit
