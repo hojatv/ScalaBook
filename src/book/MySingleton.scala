@@ -27,5 +27,12 @@ object MyMarker {
     if (markers.contains(color)) markers.get(color) else null;
   }
 
+  def main(args: Array[String]): Unit = {
+    val myMarker:MyMarker = new MyMarker("red")
+    /*val myMarker1:MyMarker = MyMarker.getMarker("red")
+    val myMarker2:MyMarker = MyMarker "red"*/
+
+  }
+
 
 }
