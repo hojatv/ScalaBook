@@ -1,3 +1,4 @@
+
 /**
   * Created by hovaheb on 11/30/2016.
   */
@@ -24,6 +25,6 @@ class MatchTypes {
 }
 object MatchTypes{
   def main(args: Array[String]) {
-    val m:MatchTypes = new MatchTypes
+    val m:book.MatchTypes = new book.MatchTypes
   }
 }

@@ -1,3 +1,4 @@
+
 /**
   * Created by hovaheb on 11/29/2016.
   */
@@ -12,7 +13,7 @@ class Unary {
 }
 object Unary{
   def main(args: Array[String]): Unit = {
-    val u:Unary = new Unary
+    val u:book.Unary = new book.Unary
     val sample = new u.Sample
     +sample
     -sample
