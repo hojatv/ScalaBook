@@ -1,4 +1,4 @@
-package book.intermixingwithjava
+package book.intermixingwithjava.investmentsample.investments
 
 import java.lang.reflect.Method
 import java.util.Date

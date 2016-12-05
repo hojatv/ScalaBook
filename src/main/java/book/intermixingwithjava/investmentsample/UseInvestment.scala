@@ -1,6 +1,6 @@
-package book.intermixingwithjava
+package book.intermixingwithjava.investmentsample
 
-import book.intermixingwithjava.investments.{Investment, InvestmentType}
+import book.intermixingwithjava.investmentsample.investments.{Investment, InvestmentType}
 
 /**
   * Created by hovaheb on 12/5/2016.

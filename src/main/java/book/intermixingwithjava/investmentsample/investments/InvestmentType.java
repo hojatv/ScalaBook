@@ -1,4 +1,4 @@
-package book.intermixingwithjava.investments;
+package book.intermixingwithjava.investmentsample.investments;
 
 /**
  * Created by hovaheb on 12/5/2016.
