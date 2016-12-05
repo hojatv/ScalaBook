@@ -6,7 +6,7 @@ package book.cuncurrentprogramming
 
 class FasterPerfectNumberFinder {
 
-  def sumOfFactorsInRange(lower: Int, upper: Int, number: Int) = {
+  /*def sumOfFactorsInRange(lower: Int, upper: Int, number: Int) = {
     (0 /: (lower to upper)) { (sum, i) => if (number % i == 0) sum + i else sum }
   }
 
@@ -35,6 +35,6 @@ class FasterPerfectNumberFinder {
 
   println("6 is perfect? " + isPerfectConcurrent(6))
   println("33550336 is perfect? " + isPerfectConcurrent(33550336))
-  println("33550337 is perfect? " + isPerfectConcurrent(33550337))
+  println("33550337 is perfect? " + isPerfectConcurrent(33550337))*/
 
 }
