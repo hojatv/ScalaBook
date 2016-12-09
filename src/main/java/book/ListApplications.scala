@@ -10,8 +10,7 @@ class ListApplications {
   val feedsWithForums =
     feeds ::: List("forums.pragprog.com/forums/87", "forums.pragprog.com/forums/55")
 
-
-}
+  }
 
 object ListApplications {
   def main(args: Array[String]): Unit = {

@@ -44,5 +44,22 @@
             <artifactId>junit</artifactId>
             <version>4.12</version>
         </dependency>
+       <dependency>
+            <groupId>org.scalactic</groupId>
+            <artifactId>scalactic_2.11</artifactId>
+            <version>3.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.scalatest</groupId>
+            <artifactId>scalatest_2.12</artifactId>
+            <version>3.0.1</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.scalatest/scalatest -->
+        <dependency>
+            <groupId>org.scalatest</groupId>
+            <artifactId>scalatest</artifactId>
+            <version>0.9.5</version>
+        </dependency>
     </dependencies>
 </project>
