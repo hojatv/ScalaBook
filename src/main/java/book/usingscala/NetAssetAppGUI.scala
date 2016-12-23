@@ -54,8 +54,6 @@ object NetAssetAppGUI extends SimpleSwingApplication {
               netAssetLabel.text = "NetAsset: " + netAsset
               dateLabel.text = "Last Updated: " + new java.util.Date()
               updateButton.enabled = true
-
-
           }
         }
       }
