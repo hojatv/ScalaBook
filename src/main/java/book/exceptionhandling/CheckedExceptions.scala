@@ -19,7 +19,7 @@ class CheckedExceptions {
       case ex: IllegalAccessException => println(ex.getMessage)
       case ex: RuntimeException => println(ex.getMessage)
       /*case ex: Exception => println(ex.getMessage)*/
-      case _ => println("Something went wrong")
+      case _ :Throwable => println("Something went wrong")
     }
   }
 

@@ -6,6 +6,8 @@ object NetAssetStockPriceHelper {
   val symbolsAndUnits = StockPriceFinder.getTickersAndUnits()
 
   def initialTableValues : Array[Array[Any]] = {
-    val empty
+    //val emptyArrayOfArrayOfAny = new Array[Array[Any]](0,0)
+    //emptyArrayOfArrayOfAny
+    null
   }
 }
