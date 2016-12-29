@@ -14,8 +14,8 @@ class GreetingsActor extends Actor{
 object GreetingsActor{
   def main(args: Array[String]): Unit = {
     val system = ActorSystem("greetings")
-    val a = system.actorOf(Props[GreetingsActor], name = "greeting-actor")
-    a ! "Reza"
+    val a = system.actorOf(Props[GreetingsActor], name = "greetings-actor")
+    a ! Name("Reza")
     system.shutdown()
 
   }
