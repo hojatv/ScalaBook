@@ -14,6 +14,7 @@ object ReactWithin {
     reactWithin(500) {
       case number: Int => sum += number
         accumulate()
+
       case TIMEOUT => println("Timed Out")
         caller ! sum
     }
@@ -23,7 +24,8 @@ object ReactWithin {
   def accumulateWithParam(sum: Int): Unit ={
 
     reactWithin(500){
-      case number:Int => accumulateWithParam(sum + number)
+      case number:Int => println(Thread.currentThread())
+        accumulateWithParam(sum + number)
       case TIMEOUT =>
         println("Timed Out")
         caller ! sum
