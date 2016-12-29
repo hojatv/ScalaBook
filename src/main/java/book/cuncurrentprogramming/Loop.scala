@@ -12,6 +12,7 @@ object Loop {
   def accumulate() {
     var continue = true
     var sum = 0
+
     loopWhile(continue) {
       reactWithin(500) {
         case num: Int => sum += num

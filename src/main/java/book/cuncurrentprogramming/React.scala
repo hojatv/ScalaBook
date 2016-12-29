@@ -19,6 +19,7 @@ object React {
       //caller ! "done"
     }
   }
+
   def reactMessage(id: Int) {
     react {
       case msg: String => info("react: " + id + msg)

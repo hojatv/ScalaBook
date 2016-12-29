@@ -22,6 +22,7 @@ object Receive {
     caller ! sum
   }
 
+
   def main(args: Array[String]): Unit = {
 
     accumulator ! 1

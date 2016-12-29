@@ -25,6 +25,7 @@ object ReceiveWithin {
       }
       caller ! sum
     }
+
     accumulator ! 1
     accumulator ! 7
     accumulator ! 8
