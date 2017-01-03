@@ -1,12 +1,14 @@
-package book.cuncurrentprogramming.akka
 
 /**
   * Created by hovaheb on 12/30/2016.
   */
 
-import akka.actor.{Actor, ActorRef, ActorSystem, Props}
 import java.io._
 
+import akka.actor.SupervisorStrategy.Restart
+import akka.actor.{Actor, ActorRef, ActorSystem, OneForOneStrategy, Props}
+
+import scala.concurrent.duration._
 import scala.io._
 
 object WordCounter {
@@ -19,6 +21,7 @@ object WordCounter {
 
   class WordCountWorker extends Actor {
     def countWords(fileName: String) = {
+      /*val x = 5 / 0*/
       val dataFile = new File(fileName)
       Source.fromFile(dataFile).getLines.foldRight(0)(_.split(" ").size + _)
     }
@@ -31,6 +34,11 @@ object WordCounter {
 
     override def postStop(): Unit = {
       println(s"Worker actor is stopped: ${self}")
+    }
+
+    override val supervisorStrategy = OneForOneStrategy(maxNrOfRetries = 3, withinTimeRange = 5 seconds) {
+      case ex: Exception => Restart
+      case _ => Restart
     }
   }
 
@@ -72,10 +80,21 @@ object WordCounter {
     private[this] def finishSorting() {
       context.system.shutdown()
     }
+    /*override val supervisorStrategy = OneForOneStrategy(maxNrOfRetries = 3, withinTimeRange = 5 seconds) {
+      //case _: Exception => Restart
+      case _ => println("Restarting...")
+        Restart
+    }*/
+    /*override val supervisorStrategy = AllForOneStrategy(){
+      //case _: Exception => Restart
+      case _ => println("Restarting...")
+        Restart
+    }*/
   }
+
   def main(args: Array[String]): Unit = {
     val system = ActorSystem("word-count-system")
-    val m = system.actorOf(Props[WordCountMaster], name="master")
+    val m = system.actorOf(Props[WordCountMaster], name = "master")
     m ! StartCounting("src/main/java/book/cuncurrentprogramming/akka/", 2)
   }
 }
