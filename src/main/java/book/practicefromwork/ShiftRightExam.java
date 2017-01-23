@@ -85,7 +85,7 @@ public class ShiftRightExam {
                 i++;
             } else {
                 indexes.add(i);
-                i  ++;
+                i++;
             }
         } while (i < H.length);
         return 0;
