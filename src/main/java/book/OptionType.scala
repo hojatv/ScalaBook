@@ -1,7 +1,5 @@
 package book
 
-import java.awt.font.OpenType
-
 /**
   * Created by hovaheb on 11/24/2016.
   */
@@ -35,4 +33,14 @@ object OptionType {
     println(o.maxValues(numbers:_*))
   }
 }
-
+class Sample {
+  val max = 100
+  val MIN = 0
+  def process(input: Int) {
+    input match {
+      case max => println("Don't try this at home" ) // Compiler error
+      case MIN => println("You matched min" )
+      case _ => println("Unreachable!!" )
+    }
+  }
+}
